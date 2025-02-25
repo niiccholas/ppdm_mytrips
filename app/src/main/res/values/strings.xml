@@ -7,4 +7,7 @@
     <string name="signup">Sign up</string>
     <string name="placeholder">test@email.com</string>
     <string name="password">p455w0rd</string>
+    <string name="placeholder_icon">E-mail Icon</string>
+    <string name="password_icon">Password Icon</string>
+
 </resources>

@@ -9,5 +9,6 @@
     <string name="password">p455w0rd</string>
     <string name="placeholder_icon">E-mail Icon</string>
     <string name="password_icon">Password Icon</string>
+    <string name="arrow_icon">Arrow Icon</string>
 
 </resources>

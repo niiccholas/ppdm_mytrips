@@ -12,6 +12,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -109,7 +111,7 @@ fun Homescreen(){
                     leadingIcon = {
                         Icon(
                             painter = painterResource(id = R.drawable.lock),
-                            contentDescription = stringResource(id = R.string.placeholder_icon),
+                            contentDescription = stringResource(id = R.string.password_icon),
                             modifier = Modifier.size(24.dp)
                         )
                     },
@@ -126,7 +128,13 @@ fun Homescreen(){
                         .padding(top = 30.dp)
                 ) {
                     Text(
-                        stringResource(R.string.sign_in)
+                        stringResource(R.string.sign_in),
+                        modifier = Modifier
+                            .padding(horizontal = 5.dp)
+                    )
+                    Icon(
+                        imageVector = Icons.Filled.ArrowForward,
+                        contentDescription = ""
                     )
                 }
                 Row(

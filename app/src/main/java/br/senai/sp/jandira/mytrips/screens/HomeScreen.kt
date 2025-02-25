@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -22,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.modifier.modifierLocalMapOf
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -69,11 +71,14 @@ fun Homescreen(){
             Column {
                 Text(
                     text = stringResource(R.string.login), //esperar um pouquinho se nao o R nao aparece
-                    fontSize = 40.sp
+                    fontSize = 40.sp,
+                    fontWeight = FontWeight.ExtraBold,
+                    color = Color(0xFF2750CE)
                 )
                 Text(
                     text = stringResource(R.string.description), //esperar um pouquinho se nao o R nao aparece
-                    fontSize = 20.sp
+                    fontSize = 20.sp,
+                    color = Color(0x833863DA)
                 )
                 OutlinedTextField(
                     value = "",
@@ -83,6 +88,7 @@ fun Homescreen(){
                     },
                     modifier = Modifier
                         .fillMaxWidth()
+                        .padding(top = 50.dp)
                 )
                 OutlinedTextField(
                     value = "",
@@ -100,14 +106,33 @@ fun Homescreen(){
                     ),
                     modifier = Modifier
                         .align(Alignment.End)
+                        .padding(top = 30.dp)
                 ) {
                     Text(
                         stringResource(R.string.sign_in)
                     )
                 }
-                Text(
-                    stringResource()
-                )
+                Row(
+                    modifier = Modifier
+                        .align(Alignment.End)
+                ) {
+                    Text(
+                        stringResource(R.string.account),
+                        color = Color(0x852750CE),
+                        modifier = Modifier
+                            .padding(top = 6.dp)
+                    )
+                    Text(
+                        stringResource(R.string.signup),
+                        modifier = Modifier
+                            .padding(horizontal = 5.dp)
+                            .padding(top = 6.dp),
+
+                        color = Color(0xFFA6B0D0),
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+
 
             }
 
